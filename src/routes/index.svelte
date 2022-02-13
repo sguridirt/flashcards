@@ -13,12 +13,12 @@
   <title>flashcards!</title>
 </svelte:head>
 
-<main class="flex flex-col items-center max-w-2xl p-8 gap-5 my-0 mx-auto">
-  <h2 class="self-start uppercase text-sm text-gray-700">{deckName}</h2>
+<main class="my-0 mx-auto flex max-w-2xl flex-col items-center gap-5 p-8">
+  <h2 class="self-start text-sm uppercase text-gray-700">{deckName}</h2>
   <Card />
   {#if started}
     <AnswerForm />
-    <p class="text-gray-700 italic">
+    <p class="italic text-gray-700">
       (Press <kbd class="tracking-normal">enter</kbd> to continue)
     </p>
   {:else}

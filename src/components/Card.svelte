@@ -6,11 +6,15 @@
   }
 </script>
 
-<div class="relative w-full h-28 rounded-sm bg-white flippable" class:flipped on:click={flipCard}>
-  <div class="absolute flex items-center justify-center p-4 w-full h-full front">
-    <p class="font-bold text-2xl tracking-wide">Front</p>
+<div
+  class="flippable relative mb-2 h-28 w-full rounded-sm bg-white"
+  class:flipped
+  on:click={flipCard}
+>
+  <div class="front absolute flex h-full w-full items-center justify-center p-4">
+    <p class="text-2xl font-bold tracking-wide">grossmutter</p>
   </div>
-  <div class="absolute flex items-center justify-center p-4 w-full h-full back">
+  <div class="back absolute flex h-full w-full items-center justify-center p-4">
     <p>Back</p>
   </div>
 </div>
