@@ -1,8 +1,10 @@
 <script lang="ts">
-  import InputDisplay from "../components/InputDisplay.svelte";
+  import AnswerForm from "../components/AnswerForm.svelte";
   import Card from "../components/Card.svelte";
 
-  export let deckName = "Duolingo word review";
+  let deckName: string = "Duolingo word review";
+
+  let inputStr = "";
 </script>
 
 <svelte:head>
@@ -10,7 +12,8 @@
 </svelte:head>
 
 <main class="flex flex-col items-center max-w-2xl p-8 gap-5 my-0 mx-auto">
-  <h2 class="self-start uppercase text-sm text-gray-800">{deckName}</h2>
+  <h2 class="self-start uppercase text-sm text-gray-700">{deckName}</h2>
   <Card />
-  <InputDisplay />
+  <AnswerForm />
+  <p class="text-gray-700 italic">(Press enter to continue)</p>
 </main>
