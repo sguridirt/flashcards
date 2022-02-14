@@ -33,6 +33,7 @@
     -webkit-transform: rotateX(0deg);
     transform: rotateX(0deg);
     transition: transform 0.2s;
+    z-index: 0;
 
     box-shadow: 2px 2px 4px 3px rgb(235, 235, 235); /* TODO: Try to fix this workaround */
   }
@@ -55,6 +56,7 @@
   }
 
   .back {
+    z-index: 1;
     -webkit-transform: rotateX(-180deg);
     transform: rotateX(-180deg);
     will-change: transform;
