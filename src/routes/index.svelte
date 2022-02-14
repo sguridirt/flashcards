@@ -10,7 +10,7 @@
   import { shouldCleanForm } from "../stores/formStore";
 
   const DECK_NAME: string = "Duolingo word review";
-  const DECK_LENGTH: number = 2;
+  const DECK_LENGTH: number = 7;
   const deck = createDeck(vocab.vocabulary, DECK_LENGTH);
 
   let formPrompt: string = "Type your answer 👇";
