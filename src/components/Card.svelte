@@ -50,6 +50,10 @@
     backface-visibility: hidden;
   }
 
+  .front {
+    z-index: 1;
+  }
+
   .back {
     -webkit-transform: rotateX(-180deg);
     transform: rotateX(-180deg);
