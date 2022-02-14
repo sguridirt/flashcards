@@ -1,21 +1,28 @@
 <script lang="ts">
+  import { SessionState } from "../models";
+
+  import { session } from "../stores/sessionStore";
+
+  export let front: string;
+  export let back: string[];
+
   let flipped: boolean = false;
 
-  function flipCard() {
-    flipped = !flipped;
+  $: {
+    flipped = $session.state === SessionState.Revising;
   }
 </script>
 
-<div
-  class="flippable relative mb-2 h-28 w-full rounded-sm bg-white"
-  class:flipped
-  on:click={flipCard}
->
+<div class="flippable relative mb-2 h-28 w-full rounded-sm bg-white" class:flipped>
   <div class="front absolute flex h-full w-full items-center justify-center p-4">
-    <p class="text-2xl font-bold tracking-wide">grossmutter</p>
+    <p class="text-2xl font-bold tracking-wide">{front}</p>
   </div>
-  <div class="back absolute flex h-full w-full items-center justify-center p-4">
-    <p>Back</p>
+  <div
+    class="back absolute flex h-full w-full flex-col flex-wrap items-center justify-center p-4"
+  >
+    {#each back as possibleAnswer}
+      <p class="text-lg">{possibleAnswer}</p>
+    {/each}
   </div>
 </div>
 
