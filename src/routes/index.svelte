@@ -24,7 +24,6 @@
   }
 
   function processSubmit(event) {
-    console.log(`before action: ${$session.state} ${$session.index}`);
     switch ($session.state) {
       case SessionState.Answering:
         $shouldCleanForm = false;
