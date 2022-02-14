@@ -130,7 +130,7 @@
           <li>
             <span class="italic capitalize">{word.german}</span> → {word.english
               .slice(0, 3)
-              .join(" ")}
+              .join(", ")}
           </li>
         {/each}
       </ul>
